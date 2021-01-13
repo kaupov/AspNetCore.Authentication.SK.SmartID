@@ -43,7 +43,9 @@ namespace AspNetCore.Authentication.SK.SmartId.Tests
         public async Task ProcessAuthentication(string expectedResult, string countryCode, string nationalIdentityNumber,
             string nameIdentifier, string givenName, string surName)
         {
-            var session = await _smartIdClient.StartAuthenticationAsync(countryCode, nationalIdentityNumber);
+            var session = await _smartIdClient.StartAuthenticationAsync(countryCode, nationalIdentityNumber,
+                new List<AllowedInteraction>
+                    {new AllowedInteraction(AllowedInteractionType.DisplayTextAndPin, "Test")});
 
             Assert.NotNull(session);
             Assert.Equal(4, session.VerificationCode.Length);

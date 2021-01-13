@@ -13,5 +13,7 @@ namespace AspNetCore.Authentication.SK.SmartId.SmartId.Rest.Dao
         public SessionStatusCertificate Cert { get; set; }
 
         public List<string> IgnoredProperties { get; set; }
+
+        public string InteractionFlowUsed { get; set; }
     }
 }

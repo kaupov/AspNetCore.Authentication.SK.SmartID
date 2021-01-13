@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using System.Collections.Generic;
+using AspNetCore.Authentication.SK.SmartId.SmartId;
+using Microsoft.AspNetCore.Authentication;
 
 namespace AspNetCore.Authentication.SK.SmartId
 {
@@ -10,10 +12,8 @@ namespace AspNetCore.Authentication.SK.SmartId
         public string RelyingPartyName { get; private set; }
 
         public string HostUrl { get; private set; } = SmartIdDefaults.LiveHostUrl;
-        
-        public string DisplayText { get; set; }
 
-        public bool AskVerificationCodeChoice { get; set; }
+        public List<AllowedInteraction> AllowedInteractions { get; } = new List<AllowedInteraction>();
 
         public SmartIdOptions UseDemo()
         {
