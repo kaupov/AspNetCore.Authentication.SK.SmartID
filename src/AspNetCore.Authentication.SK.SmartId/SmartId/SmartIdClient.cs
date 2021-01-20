@@ -108,7 +108,7 @@ namespace AspNetCore.Authentication.SK.SmartId.SmartId
             switch (interaction.Type)
             {
                 case AllowedInteractionType.DisplayTextAndPin:
-                    result.Type = "displayTextAndPin";
+                    result.Type = "displayTextAndPIN";
                     result.DisplayText60 = interaction.DisplayText;
                     break;
                 case AllowedInteractionType.VerificationCodeChoice:
