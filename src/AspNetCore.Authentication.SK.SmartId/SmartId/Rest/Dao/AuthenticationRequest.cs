@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace AspNetCore.Authentication.SK.SmartId.SmartId.Rest.Dao
+namespace AspNetCore.Authentication.SK.SmartID.SmartID.Rest.Dao
 {
     public class AuthenticationRequest
     {

@@ -6,9 +6,9 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using AspNetCore.Authentication.SK.SmartId.SmartId.Rest.Dao;
+using AspNetCore.Authentication.SK.SmartID.SmartID.Rest.Dao;
 
-namespace AspNetCore.Authentication.SK.SmartId.SmartId
+namespace AspNetCore.Authentication.SK.SmartID.SmartID
 {
     public class SmartIdClient
     {

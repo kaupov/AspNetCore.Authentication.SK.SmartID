@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using AspNetCore.Authentication.SK.SmartId.SmartId;
+using AspNetCore.Authentication.SK.SmartID.SmartID;
 using Microsoft.AspNetCore.Authentication;
 
-namespace AspNetCore.Authentication.SK.SmartId
+namespace AspNetCore.Authentication.SK.SmartID
 {
     public class SmartIdOptions : AuthenticationSchemeOptions
     {

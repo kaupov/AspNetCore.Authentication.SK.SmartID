@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using AspNetCore.Authentication.SK.SmartId.SmartId;
+using AspNetCore.Authentication.SK.SmartID.SmartID;
 using Xunit;
 
-namespace AspNetCore.Authentication.SK.SmartId.Tests
+namespace AspNetCore.Authentication.SK.SmartID.Tests
 {
     public class SmartIdClientShould
     {

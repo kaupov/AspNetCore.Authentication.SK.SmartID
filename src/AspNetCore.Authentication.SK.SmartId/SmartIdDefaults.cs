@@ -1,4 +1,4 @@
-﻿namespace AspNetCore.Authentication.SK.SmartId
+﻿namespace AspNetCore.Authentication.SK.SmartID
 {
     public static class SmartIdDefaults
     {

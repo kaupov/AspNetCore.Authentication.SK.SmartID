@@ -1,7 +1,6 @@
-using AspNetCore.Authentication.SK.Sample.Data;
-using AspNetCore.Authentication.SK.Sample.Models;
-using AspNetCore.Authentication.SK.SmartId;
-using AspNetCore.Authentication.SK.SmartId.SmartId;
+using AspNetCore.Authentication.SK.SmartID.Sample.Data;
+using AspNetCore.Authentication.SK.SmartID.Sample.Models;
+using AspNetCore.Authentication.SK.SmartID.SmartID;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,7 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace AspNetCore.Authentication.SK.Sample
+namespace AspNetCore.Authentication.SK.SmartID.Sample
 {
     public class Startup
     {

@@ -3,13 +3,13 @@ using System.Net.Http;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using AspNetCore.Authentication.SK.SmartId.SmartId;
+using AspNetCore.Authentication.SK.SmartID.SmartID;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace AspNetCore.Authentication.SK.SmartId
+namespace AspNetCore.Authentication.SK.SmartID
 {
     public class SmartIdHandler : AuthenticationHandler<SmartIdOptions>
     {
