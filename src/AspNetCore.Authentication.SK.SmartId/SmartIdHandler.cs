@@ -76,12 +76,16 @@ namespace AspNetCore.Authentication.SK.SmartID
             {
                 Logger.LogError(exception,
                     $"Failed to start SmartId authentication, trouble {exception.Trouble} returned");
-                Context.Response.Redirect($"/Identity/Account/ExternalLogin?handler=Callback&remoteError={exception.Trouble:G}");
+
+                Context.Response.Redirect(
+                    $"/Identity/Account/SmartIdAuthentication?returnUrl={UrlEncoder.Default.Encode(returnUrl)}&remoteError={exception.Trouble:G}");
             }
             catch (HttpRequestException exception)
             {
                 Logger.LogError(exception, "Failed to start SmartId authentication, invalid result returned");
-                Context.Response.Redirect($"/Identity/Account/ExternalLogin?handler=Callback&remoteError={Trouble.Unknown:G}");
+
+                Context.Response.Redirect(
+                    $"/Identity/Account/SmartIdAuthentication?returnUrl={UrlEncoder.Default.Encode(returnUrl)}&remoteError={Trouble.Unknown:G}");
             }
         }
 
@@ -100,12 +104,16 @@ namespace AspNetCore.Authentication.SK.SmartID
             catch (SmartIdTroubleException exception)
             {
                 Logger.LogError(exception, $"Failed to check SmartId session, trouble {exception.Trouble} returned");
-                Context.Response.Redirect($"/Identity/Account/ExternalLogin?handler=Callback&remoteError={exception.Trouble:G}");
+
+                Context.Response.Redirect(
+                    $"/Identity/Account/SmartIdAuthentication?returnUrl={UrlEncoder.Default.Encode(properties.RedirectUri)}&remoteError={exception.Trouble:G}");
             }
             catch (HttpRequestException exception)
             {
                 Logger.LogError(exception, "Failed to check SmartId session, invalid results returned");
-                Context.Response.Redirect($"/Identity/Account/ExternalLogin?handler=Callback&remoteError={Trouble.Unknown:G}");
+
+                Context.Response.Redirect(
+                    $"/Identity/Account/SmartIdAuthentication?returnUrl={UrlEncoder.Default.Encode(properties.RedirectUri)}&remoteError={Trouble.Unknown:G}");
             }
         }
     }

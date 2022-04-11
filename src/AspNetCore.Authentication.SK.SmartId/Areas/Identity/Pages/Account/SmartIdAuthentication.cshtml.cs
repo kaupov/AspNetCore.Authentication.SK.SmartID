@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using AspNetCore.Authentication.SK.SmartID.Helpers;
 using Microsoft.AspNetCore.Authorization;
@@ -34,9 +35,12 @@ namespace AspNetCore.Authentication.SK.SmartID.Areas.Identity.Pages.Account
             public string NationalIdentityNumber { get; set; }
         }
 
-        public void OnGet(string returnUrl = null)
+        public void OnGet(string returnUrl = null, string remoteError = null)
         {
             ReturnUrl = returnUrl ?? Url.Content("~/");
+
+            if (remoteError != null)
+                ModelState.AddModelError(String.Empty, remoteError);
         }
 
         public IActionResult OnPost(string returnUrl = null)
